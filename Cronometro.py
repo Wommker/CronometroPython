@@ -39,13 +39,13 @@ class interface:
 
     def tick(self):
         self.millisecond=self.passofthetime(self.millisecond)
-        if(self.millisecond == 999):
+        if(self.millisecond == 1000):
             self.millisecond = 0
             self.second=self.passofthetime(self.second)
-        if(self.second == 59):
+        if(self.second == 60):
             self.second = 0
             self.minute=self.passofthetime(self.minute)
-        if(self.minute == 59):
+        if(self.minute == 60):
             self.minute = 0
             self.hour=self.passofthetime(self.hour)
         result=self.getvalue(self.hour,False)+":"+self.getvalue(self.minute,False)+":"+self.getvalue(self.second,False)+":"+self.getvalue(self.millisecond,True)
